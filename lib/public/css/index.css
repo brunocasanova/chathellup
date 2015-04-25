@@ -1,0 +1,61 @@
+/* Main Css file */
+
+.header{
+}
+
+.logo{
+
+}
+
+.body{
+}
+
+.footer{
+}
+
+#chat{
+	height: 400px;
+	margin-top: 4%;
+
+	box-sizing: border-box;
+}
+
+#chat .menu{
+}
+
+#chat .messages{
+	
+	height: 100%;
+	padding: 0px;
+}
+
+#chat .messages .text{
+	height: 250px !important;
+	padding: 20px;
+	overflow: scroll;
+	border-radius: 4px;
+	background-color: #F5F5F5;
+	word-break: break-all;
+}
+
+#chat .messages .submit {
+	padding: 10px 0px;
+}
+
+@media ( max-width: 560px ) {
+
+	#chat{
+		height: 20%;
+	}
+
+	#chat .messages .submit button{
+		display: block;
+	}
+
+	#chat .messages .submit input,
+	#chat .messages .submit button{
+		margin: 2px;
+		width: 100%;
+	}
+
+}

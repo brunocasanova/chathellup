@@ -1,0 +1,24 @@
+{
+  "name": "chathellup",
+  "version": "0.0.1",
+  "description": "Chat the hell up",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chat",
+    "chathellup",
+    "brunocasanova"
+  ],
+  "author": "Bruno Casanova <deftonicks_me@hotmail.com>",
+  "license": "GPL v3",
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "express-ejs-layouts": "^1.1.0",
+    "serve-favicon": "^2.2.0",
+    "socket.io": "^1.3.5"
+  }
+}
