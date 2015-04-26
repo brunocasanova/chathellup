@@ -21,6 +21,8 @@
 }
 
 #chat .menu{
+	word-break: break-all;
+	overflow: scroll;
 }
 
 #chat .messages{
@@ -32,9 +34,9 @@
 #chat .messages .text{
 	height: 250px !important;
 	padding: 20px;
-	overflow: scroll;
 	border-radius: 4px;
 	background-color: #F5F5F5;
+	overflow: scroll;
 	word-break: break-all;
 }
 
