@@ -1,8 +1,17 @@
 <div id="chat" class="row">
 
 	<div class="three columns menu">
-		<div class="profile"></div>
+
+		<form id="nickname-form">
+			<label>Choose a nickname</label>
+			<input type="text" id="nickname" placeholder="Type your nickname" autofocus="on">
+			<button type="submit" onsubmit="false">Enter</button>
+		</form>
+
+		<div class="nickname-error"><span style="color: red;">nickname not available.<span></div>
+		<div class="display"></div>
 		<div class="list"></div>
+
 	</div>
 
 	<div class="nine columns messages">
@@ -10,14 +19,12 @@
 		<div class="row text"></div>
 
 		<div class="row submit">
-
 			<div class="twelve columns">
 
 				<form id="chat-form" autocomplete="off">
 					<input type="text" id="message" placeholder="Curse a message..." autofocus="on">
-					<button type="submit" onsubmit="false">Send</button>
+					<button type="submit" onsubmit="false">Submit</button>
 				</form>
-
 			</div>
 
 		</div>
