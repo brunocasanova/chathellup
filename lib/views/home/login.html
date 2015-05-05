@@ -1,0 +1,39 @@
+<h3>Login</h3>
+
+<form method="post" action="/login" id="login-form" class="form-horizontal">
+
+	<div class="form-group">
+		<div class="col-sm-4">
+			<input value="bruno" type="text" name="nickname" id="nickname" class="form-control" placeholder="Nickname" autofocus="on">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-4">
+			<input value="pass" type="password" name="password" id="password" class="form-control" placeholder="Password">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-4">
+			<div class="checkbox">
+				<label><input type="checkbox" id="remember" name="remember"> Remember me</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-4">
+			<button type="submit" class="btn btn-default">Sign in</button>
+		</div>
+	</div>
+
+</form>
+
+<p><a class="btn" href="register">Register</a></p>
+
+<% if( req.error ){ %>
+	<div id="login-error">
+		<p class="bg-danger">Wrong credentials. Try again.</p>
+	</div>
+<% } %>

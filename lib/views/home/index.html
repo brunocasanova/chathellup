@@ -1,34 +1,41 @@
-<div id="chat" class="row">
+<p>
+	<a class="btn" href="logout">Logout</a>
+	<a class="btn" href="general">General room</a>
+	<a class="btn" href="debug" target="_blank">Debug mode</a>
+</p>
 
-	<div class="three columns menu">
+<h4 style="color:<%- req.session.color %>;">Hi <%- req.session.nickname %>!</h4>
+<p>Presence: <%- req.session.presence %></p>
 
-		<form id="nickname-form">
-			<label>Choose a nickname</label>
-			<input type="text" id="nickname" placeholder="Type your nickname" autofocus="on">
-			<button type="submit" onsubmit="false">Enter</button>
-		</form>
+<hr>
 
-		<div class="nickname-error"><span style="color: red;">nickname not available.<span></div>
-		<div class="display"></div>
-		<div class="list"></div>
+<% if( req.users ){ %>
+	<table class="table table-bordered">
+		<% for( var i in req.users ){ %>
 
-	</div>
+			<strong><p><%- req.users[i].nickname %></p></strong>
+			<p><%- req.users[i].color %></p>
+			<p><%- req.users[i].presence %></p>
+			<br>
 
-	<div class="nine columns messages">
+		<% } %>
+	</table>
+<% } %>
 
-		<div class="row text"></div>
-
-		<div class="row submit">
-			<div class="twelve columns">
-
-				<form id="chat-form" autocomplete="off">
-					<input type="text" id="message" placeholder="Curse a message..." autofocus="on">
-					<button type="submit" onsubmit="false">Submit</button>
-				</form>
-			</div>
-
-		</div>
-
-	</div>
-	
-</div>
+<% if( req.messages ){ %>
+	<table class="table table-bordered">
+		<tr>
+			<th>
+				Message
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<% for( var i in req.messages ){ %>
+					<p><%- req.messages[i].message %></p>
+					<br>
+				<% } %>
+			</td>
+		</tr>
+	</table>
+<% } %>

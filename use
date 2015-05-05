@@ -1,0 +1,12 @@
+MongoDB shell version: 3.0.2
+connecting to: admin
+Server has startup warnings: 
+2015-05-01T22:29:02.057+0100 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2015-05-01T22:29:02.057+0100 I CONTROL  [initandlisten] 
+> [3G[J[3G> [3G[J[3G> wedww[3G[Jwedww[8G
+
+
+2015-05-01T22:45:18.862+0100 E QUERY    ReferenceError: wedww is not defined
+    at (shell):1:1
+> fw[3G[Jfw[5G^C
+bye

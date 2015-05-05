@@ -1,44 +1,24 @@
 <!DOCTYPE html>  
-
 <html lang="en">  
     
     <head>
-
-        <meta charset="utf-8">
-        <title><%- title %>!</title>
-
-        <script src="public/js/thirds/jquery-1.11.2.min.js"></script>
-        <script src="public/js/socket/index.js"></script>
-        <script src="socket.io/socket.io.js"></script>
-        
-        <link href="public/css/normalize.css" rel="stylesheet">
-        <link href="public/css/skeleton.css" rel="stylesheet">
-        <link href="public/css/index.css" rel="stylesheet">
-
+        <% include head.html %>
     </head>
 
-    <header>
-            
-        <div class="container header">
-            <% include header.html %>
-        </div>
-
-    </header>
-
     <body>
-
-        <div class="container body">
+        <div class="container">
+            
+            <header>
+                <% include header.html %>
+            </header>
+            
             <%- body %>
-        </div>
 
+            <footer>
+                <% include footer.html %>
+            </footer>
+
+        </div>
     </body>
-
-    <footer>
-
-        <div class="container footer">
-            <% include footer.html %>
-        </div>
-
-    </footer>
 
 </html>
