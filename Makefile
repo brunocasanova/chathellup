@@ -1,19 +1,20 @@
+run: start-node
 
-ROOT_PATH=OpenShift/brunocasanova/chathellup
-node_process_id=$(pidof node)
+start-node:
+	@echo "\n\x1b[92m[NODE]:\x1b[0m initializing..."; \
+	echo "\x1b[32m[NODEMON]:\x1b[0m initializing..."; \
+	nodemon --debug index.js;
 
-run:
-	@mongod & \
-	node-inspector & \
-	DEBUG=l nodemon --debug index.js
-
-testing:
-	@if pgrep "sublime" > /dev/null; \
+kill-mongo:
+	@if pgrep "mongo" | "mongod" > /dev/null; \
 	then \
-		echo "Running"; \
+		mongo --eval "db.getSiblingDB('admin').shutdownServer()" > /dev/null; \
+		echo "[MONGO DB]: process stopped."; \
 	else \
-		echo "Stopped"; \
+		echo "[MONGO DB]: process isn't running."; \
 	fi
+
+
 
 
 
