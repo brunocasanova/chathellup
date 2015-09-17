@@ -3,7 +3,7 @@ run: start-node
 start-node:
 	@echo "\n\x1b[92m[NODE]:\x1b[0m initializing..."; \
 	echo "\x1b[31m[NPM]:\x1b[0m installing and updating, this may take a while..."; \
-	npm i && npm update; \
+	npm i && npm update && \
 	echo "\x1b[32m[NODEMON]:\x1b[0m initializing..."; \
 	nodemon --debug index.js;
 
@@ -15,6 +15,9 @@ kill-mongo:
 	else \
 		echo "[MONGO DB]: process isn't running."; \
 	fi
+
+check:
+	@ps aux | grep node && ps aux | grep mongo && ps aux | grep inspector;
 
 
 
