@@ -17,7 +17,7 @@
     "url": "git://github.com/brunocasanova/chathellup.git"
   },
   "author": "Bruno Casanova <deftonicks_me@hotmail.com>",
-  "license": "GPL v3",
+  "license": "GPL-2.0+",
   "dependencies": {
     "bluebird": "^2.10.0",
     "body-parser": "^1.12.3",
