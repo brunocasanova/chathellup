@@ -1,3 +1,5 @@
 # chathellup
 
-Repository for testing sockets.
+Because sometimes just chat the hell up!
+
+``make run`` to start.
