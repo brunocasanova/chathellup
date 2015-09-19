@@ -1,8 +1,18 @@
-var task = require( './task.js' );
-
-task.start
+require( './task.js' ).start
 .then(function (){
-	console.log( '\n\x1b[36m[CHATHELLUP]:\x1b[0m Initializing app...', '' );
+
+	outlog({
+		title: 'CHATHELLUP',
+		label: '\n\x1b[36m',
+		output: 'Initializing app...'
+	});
+
+	if( env == 'DEV' ) outlog({
+		title: 'CHATHELLUP',
+		label: '\x1b[36m',
+		output: 'running on [DEV] environment.'
+	});
+
 })
 .then(function(){
 	require( './lib/server/database' );
@@ -11,6 +21,17 @@ task.start
 	module.exports = require( './lib' );
 })
 .catch(function ( err ){
-	console.error( '\x1b[36m[CHATHELLUP]\x1b[0m\x1b[31m[SYSTEM]:\x1b[0m', err.stack );
+
+	outlog({
+		title: 'CHATHELLUP',
+		label: '\n\x1b[36m',
+
+		subTitle: 'SYSTEM',
+		subLabel: '\x1b[31m',
+
+		output: err.stack,
+	});
+
 	process.exit();
+
 });

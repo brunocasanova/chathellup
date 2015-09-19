@@ -5,7 +5,7 @@ start-node:
 	echo "\x1b[31m[NPM]:\x1b[0m installing and updating, this may take a while..."; \
 	npm i && npm update && \
 	echo "\x1b[32m[NODEMON]:\x1b[0m initializing..."; \
-	nodemon --debug index.js;
+	nodemon --debug index.js DEV;
 
 kill-mongo:
 	@if pgrep "mongo" | "mongod" > /dev/null; \
